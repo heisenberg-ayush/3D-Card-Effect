@@ -21,6 +21,7 @@ container.addEventListener("mousemove", (e) => {
 
 // Different Pick Event
 pick.addEventListener("click", e => {
+    document.body.style.backgroundImage = "url(./images/fight-bg.jpg)";
     var hero = e.target.id;
     var cardd = e.target.parentElement.parentElement.parentElement.classList.value;
     removeShow();
@@ -29,6 +30,9 @@ pick.addEventListener("click", e => {
     card.style.left = "15rem";
     var classOF1 = document.querySelector(`.${hero}`);
     var classOF2 = document.querySelector(`.${cardd}`);
+
+    classOF1.style.background = "linear-gradient( to right bottom, rgba(255, 255, 255, 0.308), rgba(255, 255, 255, 0.151))";
+
     classOF1.classList.add('show');
     classOF1.style.marginLeft = "5rem";
     classOF1.style.transformStyle = "preserve-3d";
@@ -38,8 +42,6 @@ pick.addEventListener("click", e => {
     classOF1.style.boxShadow = "0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2)";
     classOF1.style.padding = "0 5rem";
 
-
-    console.log(classOF1.childNodes);
     // Items
     var newtitle = classOF1.childNodes[1];
     var newdescription = classOF1.childNodes[3];
